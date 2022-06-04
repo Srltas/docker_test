@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:cubrid:172.18.0.2:33000:test:dba::?charSet=utf-8
+    username: dba
+    password:
+    driver-class-name: cubrid.jdbc.driver.CUBRIDDriver
+
+  output:
+    ansi:
+      enabled: always
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#       show_sql: true
+        format_sql: true
+
+logging:
+  level:
+    org.hiberate.SQL: debug
